@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apnex | App Making: The Next Level</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --accent: #f59e0b;
+            --dark: #0f172a;
+            --bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            color: var(--dark);
+        }
+
+        /* Hero Section with New Logo */
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px 100px;
+        }
+
+        /* LOGO STYLING */
+        .header-logo {
+            max-width: 280px; /* Adjust width as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .price-tag { font-size: 1.5rem; background: rgba(255,255,255,0.1); display: inline-block; padding: 10px 20px; border-radius: 50px; border: 1px solid var(--accent); }
+
+        /* Form Styling (Same as before) */
+        .container { max-width: 700px; margin: -50px auto 50px; padding: 0 20px; }
+        
+        .form-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-header { text-align: center; margin-bottom: 30px; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+        .input-group { margin-bottom: 20px; }
+        label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: #64748b; }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        textarea { height: 120px; }
+
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4); }
+
+        footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 0.9rem; }
+
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="apnex-logo.png" alt="Apnex Logo" class="header-logo">
+        <br>
+        <div class="price-tag">Consultancy: Only $3 per Generation</div>
+    </header>
+
+    <div class="container">
+        <div class="form-card">
+            <div class="form-header">
+                <h2>Request Consultancy</h2>
+                <p>Fill out the details below and our team will contact you.</p>
+            </div>
+
+            <form action="https://formsubmit.co/arshroshan23@.com" method="POST">
+                
+                <input type="hidden" name="_subject" value="New Apnex Consultancy Request!">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="grid">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" name="Name" placeholder="Eg: James Bond" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Age</label>
+                        <input type="number" name="Age" placeholder="Your age" required>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="input-group">
+                        <label>Current Job</label>
+                        <input type="text" name="Job" placeholder="Student, Engineer, etc." required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="Phone" placeholder="+971..." required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Email ID</label>
+                    <input type="email" name="Email" placeholder="yourname@gmail.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Project Type</label>
+                    <select name="Project Type" required>
+                        <option value="Mobile App">Mobile App Generation</option>
+                        <option value="Website">Website Generation</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Description of the App</label>
+                    <textarea name="Description" placeholder="Tell us about your dream app idea..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Email for Consultancy</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Apnex. Contact us via Gmail for support.</p>
+    </footer>
+
+</body>
+</html>
